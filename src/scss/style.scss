@@ -88,6 +88,7 @@ html{
 }
 .button{
     @include flex-center;
+    text-decoration: none;
     border-radius: 15px;
     width: 175px;
     height: 50px;
@@ -234,5 +235,20 @@ html{
         @include font-poppins_regular;
         @include text-format($color: #555555, $font-size: 18px, $line-height: 32px);
         margin-bottom: 50px;
+    }
+}
+
+.footer{
+    &__nav-menu{
+        display: flex;
+        gap: 30px;
+    }
+    &__item{
+        font-family: "Poppins-SemiBold";
+        font-weight: 600;
+        font-style: normal;
+        color: white;
+        font-size: 18px;
+        line-height: 32px;
     }
 }
