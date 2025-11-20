@@ -1,0 +1,238 @@
+@import "_normalize.scss";
+@import "_reset.scss";
+
+@font-face{
+    font-family: "Poppins-Regular";
+    src: url("../fonts/Poppins-Regular.ttf");
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face{
+    font-family: "Poppins-SemiBold";
+    src: url("../fonts/Poppins-SemiBold.ttf");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@mixin flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin font-poppins_regular{
+    font-family: "Poppins-Regular";
+    font-weight: 400;
+    font-style: normal;
+}
+@mixin font-poppins_semibold{
+    font-family: "Poppins-SemiBold";
+    font-weight: 600;
+    font-style: normal;
+}
+@mixin text-format($color: white, $font-size: 16px, $line-height: normal){
+    color: $color;
+    font-size: $font-size;
+    line-height: $line-height;
+}
+
+*{
+    box-sizing: border-box;
+}
+html{
+    background-color: #2B2B2B;
+}
+// ==================== PAGE 1 ====================
+.main-section{
+    min-height: 700px;
+    margin-bottom: 80px;
+/*
+    &__nav-container{}
+    
+    
+    &__nav-menu{}
+    
+*/
+    &__header{
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 100px;
+    }
+    &__logo{
+        height: 34px;
+    }  
+    &__list{
+        display: flex;
+        align-items: center;
+        gap: 90px;
+    } 
+    &__item{
+        @include font-poppins_regular;
+        font-size: 18px;
+    }
+    &__item a{
+        text-decoration: none;
+    }
+    &__first-link{
+        color: #FFFFFF;
+    }
+    &__content-container{
+        display: flex;
+        justify-content: space-around;
+    }
+}
+.container{
+    width: 1280px;
+    margin-inline: auto;
+}
+.button{
+    @include flex-center;
+    border-radius: 15px;
+    width: 175px;
+    height: 50px;
+    color: #333333;
+    &--bg-purple{
+        background-color: #BFAFF2;
+    }
+    &--bg-yellow{
+        background-color: #F8D57E;
+    }
+}
+
+
+.left-wrapper{
+    width: 465px;
+    &__title{
+        margin-bottom: 40px;
+    }
+    &__text{
+        @include font-poppins_regular;
+        @include text-format($color: #808080, $font-size: 18px, $line-height: 32px);
+        margin-bottom: 70px;
+    }
+    &__button{
+        color: #333333;
+        @include font-poppins_regular;
+        font-size: 18px;
+        text-decoration: none;
+    }
+}
+
+.title{
+        @include font-poppins_semibold;
+        @include text-format($font-size: 60px, $line-height: 90px);
+}
+
+.right-wrapper{
+    background-color: #333;
+    border-radius: 15px;
+    width: 500px;
+    height: 446px;
+}
+
+
+// ==================== PAGE 2 ====================
+.section-preview{
+    min-height: 870px;
+    &__top{
+        height: 170px;
+        @include flex-center;
+        margin-bottom: 100px;
+    }
+    &__bottom{
+        margin-inline: auto;
+        width: 1080px;
+        height: 500px;
+        background-color: #FDF5DF;
+        border-radius: 15px;
+        @include flex-center;
+    }
+}
+
+// ==================== PAGE 3 ====================
+
+.section-feedback{
+    min-height: 870px;
+    margin-bottom: 100px;
+    &__top{
+        height: 348px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    &__icon-box{
+        width: 255px;
+        height: 255px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__icon{
+        margin-bottom: 32px;
+    }
+    &__title{
+        @include font-poppins_semibold;
+        @include text-format($font-size: 18px, $line-height: 32px);
+        margin-bottom: 10px;
+    }
+    &__text{
+        @include font-poppins_regular;
+        @include text-format($color: #555555, $font-size: 18px, $line-height: 32px);
+        text-align: center;
+    }
+
+    &__feedback-block{
+        margin-inline: auto;
+        width: 1080px;
+        height: 500px;
+        background-color: #BFAFF2;
+        border-radius: 15px;
+        padding: 80px 162px 0 162px;
+    }
+    &__feedback-text{
+        width: 740px;
+        height: 140px;
+        @include font-poppins_semibold;
+        @include text-format($color: #2B2B2B, $font-size: 24px, $line-height: 40px);
+        margin-bottom: 50px;
+    }
+    &__author-container{
+        display: flex;
+        align-items: center;
+    }
+    &__author-image{
+        margin-right: 20px;
+    }
+    &__author-name{
+        @include font-poppins_regular;
+        @include text-format($color: #2B2B2B, $font-size: 18px, $line-height: 32px);
+    }
+    &__stars-container{
+        display: flex;
+        gap: 5px;
+    }
+    &__star-icon{
+        height: 20px;
+    }
+}
+
+// ==================== PAGE 4 ====================
+.section-support{
+    min-height: 600px;
+    &__content-container{
+        display: flex;
+        justify-content: space-around;
+    }
+    &__left-wrapper{
+        height: 350px;
+        width: 370px;
+    }
+    &__title{
+        margin-bottom: 50px;
+    }
+    &__text{
+        @include font-poppins_regular;
+        @include text-format($color: #555555, $font-size: 18px, $line-height: 32px);
+        margin-bottom: 50px;
+    }
+}
