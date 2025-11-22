@@ -19,12 +19,6 @@
         padding-inline: 2rem;
     }
 
-    .right-wrapper {
-        &__diagram {
-            width: 70%;
-        }
-    }
-
     .title {
         font-size: clamp(1rem, 1rem + 1vw, 2rem);
     }

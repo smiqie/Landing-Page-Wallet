@@ -595,12 +595,21 @@ a {
   font-style: normal;
   line-height: normal;
   color: #333;
+  transition: all 0.2s ease 0s;
 }
 .button--bg-purple {
   background-color: #BFAFF2;
 }
+.button--bg-purple:hover {
+  background-color: #a28fdd;
+  transform: translateY(-0.25rem);
+}
 .button--bg-yellow {
   background-color: #F8D57E;
+}
+.button--bg-yellow:hover {
+  background-color: #d8b764;
+  transform: translateY(-0.25rem);
 }
 
 .title {
@@ -783,9 +792,6 @@ a {
   .container {
     width: 640px;
     padding-inline: 2rem;
-  }
-  .right-wrapper__diagram {
-    width: 70%;
   }
   .title {
     font-size: clamp(1rem, 1rem + 1vw, 2rem);
