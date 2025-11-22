@@ -19,6 +19,7 @@ a {
 .container {
     width: 1280px;
     margin-inline: auto;
+    padding-inline: 0.5rem;
 }
 
 // ==================== PAGE 1 ====================
@@ -54,6 +55,8 @@ a {
 
     &__content-container {
         display: flex;
+        gap: 8vw;
+        align-items: center;
         justify-content: space-around;
     }
 }
@@ -78,25 +81,29 @@ a {
 }
 
 .title {
-    @include text-format($font-family: "Poppins-SemiBold", $font-weight: 600, $font-style: normal, $font-size: clamp(2.5rem, 1.509rem + 2.76vw, 3.75rem), $line-height: 5.625rem, $color: $color-white); // !!!!!
+    @include text-format($font-family: "Poppins-SemiBold", $font-weight: 600, $font-style: normal, $font-size: clamp(1.5rem, 1.5rem + 1vw, 3.75rem), $line-height: 1.2em, $color: $color-white); // !!!!!
 }
 .left-wrapper {
-    width: 465px;
+    width: 45%;
 
     &__title {
         margin-bottom: 40px;
     }
 
     &__text {
-        @include text-format($font-family: "Poppins-Regular", $font-weight: 400, $font-style: normal, $font-size: clamp(1.125rem, 0.828rem + 0.83vw, 1.2rem), $line-height: 2rem, $color: #808080); // !!!!!
+        @include text-format($font-family: "Poppins-Regular", $font-weight: 400, $font-style: normal, $font-size: clamp(0.875rem, 0.875rem + 0.5vw, 1rem), $line-height: 1.3em, $color: #808080); // !!!!!
         margin-bottom: 70px;
+        //         $font-size: clamp(0.875rem, 0.875rem + 0.5vw, 1rem),
     }
 }
 
 .right-wrapper {
     background-color: $color-lightgray;
     border-radius: 1rem;
-    padding: 1rem 0.7rem;
+    @include flex-center;
+    &__diagram{
+        width: 90%;
+    }
 }
 
 

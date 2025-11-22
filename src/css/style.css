@@ -543,6 +543,7 @@ a {
 .container {
   width: 1280px;
   margin-inline: auto;
+  padding-inline: 0.5rem;
 }
 
 .main-section {
@@ -577,6 +578,8 @@ a {
 }
 .main-section__content-container {
   display: flex;
+  gap: 8vw;
+  align-items: center;
   justify-content: space-around;
 }
 
@@ -603,14 +606,14 @@ a {
 .title {
   font-family: "Poppins-SemiBold";
   font-weight: 600;
-  font-size: clamp(2.5rem, 1.509rem + 2.76vw, 3.75rem);
+  font-size: clamp(1.5rem, 1.5rem + 1vw, 3.75rem);
   font-style: normal;
-  line-height: 5.625rem;
+  line-height: 1.2em;
   color: #FFF;
 }
 
 .left-wrapper {
-  width: 465px;
+  width: 45%;
 }
 .left-wrapper__title {
   margin-bottom: 40px;
@@ -618,9 +621,9 @@ a {
 .left-wrapper__text {
   font-family: "Poppins-Regular";
   font-weight: 400;
-  font-size: clamp(1.125rem, 0.828rem + 0.83vw, 1.2rem);
+  font-size: clamp(0.875rem, 0.875rem + 0.5vw, 1rem);
   font-style: normal;
-  line-height: 2rem;
+  line-height: 1.3em;
   color: #808080;
   margin-bottom: 70px;
 }
@@ -628,7 +631,12 @@ a {
 .right-wrapper {
   background-color: #333;
   border-radius: 1rem;
-  padding: 1rem 0.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.right-wrapper__diagram {
+  width: 90%;
 }
 
 .section-preview {
@@ -765,10 +773,6 @@ a {
   .container {
     width: 960px;
   }
-  .title {
-    font-size: clamp(2.5rem, 1.707rem + 2.21vw, 3.5rem);
-    line-height: 5rem;
-  }
 }
 @media (max-width: 991px) {
   .container {
@@ -778,10 +782,55 @@ a {
 @media (max-width: 767px) {
   .container {
     width: 640px;
+    padding-inline: 2rem;
+  }
+  .right-wrapper__diagram {
+    width: 70%;
+  }
+  .title {
+    font-size: clamp(1rem, 1rem + 1vw, 2rem);
+  }
+  .left-wrapper__title {
+    margin-bottom: 25px;
+  }
+  .left-wrapper__text {
+    font-size: clamp(0.5rem, 0.5rem + 0.5vw, 1rem);
+    margin-bottom: 20px;
+  }
+  .left-wrapper__button {
+    font-size: clamp(0.7rem, 0.6rem + 0.5vw, 1rem);
+    border-radius: 0.8rem;
+    padding: 0.6em 1.4em;
+  }
+  .main-section__link {
+    font-size: clamp(0.7rem, 0.6rem + 0.5vw, 1rem);
+    border-radius: 0.8rem;
+    padding: 0.6em 1.4em;
   }
 }
 @media (max-width: 575px) {
   .container {
     width: 100%;
+    padding-inline: 1rem;
+  }
+  .title {
+    font-size: clamp(1.188rem, 1rem + 0.7vw, 1.2rem);
+  }
+  .left-wrapper__title {
+    margin-bottom: 15px;
+  }
+  .left-wrapper__text {
+    font-size: clamp(0.5rem, 0.2rem + 0.5vw, 1rem);
+    margin-bottom: 10px;
+  }
+  .left-wrapper__button {
+    font-size: clamp(0.7rem, 0.6rem + 0.5vw, 1rem);
+    border-radius: 0.8rem;
+    padding: 0.6em 1.4em;
+  }
+  .main-section__link {
+    font-size: clamp(0.7rem, 0.6rem + 0.5vw, 1rem);
+    border-radius: 0.8rem;
+    padding: 0.6em 1.4em;
   }
 }/*# sourceMappingURL=style.css.map */
