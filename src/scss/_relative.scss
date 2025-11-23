@@ -2,6 +2,12 @@
     .container {
         width: 960px;
     }
+
+    // PREVIEW SECTION
+    .section-preview__bottom {
+        width: 800px;
+        height: 400px;
+    }
 }
 
 @media (max-width: 991px) {
@@ -9,12 +15,40 @@
         width: 720px;
     }
 
+    // MAIN SECTION
     .title {
         font-size: clamp(1rem, 1rem + 1vw, 1.5rem);
     }
 
     .left-wrapper__text {
         margin-bottom: 30px;
+    }
+
+    // PREVIEW SECTION
+    .section-preview {
+        margin-bottom: 60px;
+    }
+
+    .section-preview__bottom {
+        width: 700px;
+        height: 370px;
+    }
+
+    // FEEDBACK SECTION 
+    .section-feedback__title {
+        font-size: clamp(0.7rem, 0.5rem + 1vw, 1.1rem);
+    }
+
+    .section-feedback__text {
+        font-size: clamp(0.5rem, 0.5rem + 1vw, 0.8rem);
+    }
+
+    .section-feedback__feedback-text {
+        font-size: clamp(0.9rem, 0.9rem + 0.2vw, 1.3rem);
+    }
+
+    .section-feedback__feedback-block {
+        padding: 50px 132px 0 132px;
     }
 }
 
@@ -23,22 +57,44 @@
         width: 640px;
         padding-inline: 4rem;
     }
+
+    // MAIN SECTION
     .left-wrapper__title {
         margin-bottom: 20px;
     }
+
     .left-wrapper__text {
         font-size: clamp(0.5rem, 0.5rem + 0.5vw, 1rem);
         margin-bottom: 20px;
     }
-    .right-wrapper{
+
+    .right-wrapper {
         width: 45%;
     }
-     .button{
+
+    .button {
         border-radius: 0.5rem; // !!!
         padding: 0.35em 1.3em; // !!!!!! 
     }
-}
 
+    // PREVIEW SECTION
+    .section-preview__bottom {
+        width: 550px;
+        height: 300px;
+    }
+
+        // FEEDBACK SECTION 
+    .section-feedback__feedback-text {
+        font-size: clamp(0.8rem, 0.8rem + 0.2vw, 1.2rem);
+    }
+
+    .section-feedback__feedback-block {
+        padding: 50px 102px 0 102px;
+    }
+    .section-feedback__author-image {
+        height: 64px;
+    }
+}
 
 
 @media (max-width: 575px) {
@@ -46,15 +102,25 @@
         width: 100%;
         padding-inline: 2rem;
     }
+
+    // MAIN SECTION
     .left-wrapper__title {
         font-size: clamp(0.7rem, 0.8rem + 1vw, 1rem);
         margin-bottom: 15px;
     }
+
     .left-wrapper__text {
         margin-bottom: 15px;
         font-size: clamp(0.4rem, 0.2rem + 0.5vw, 0.7rem);
     }
-    .button{
+
+    .button {
         font-size: clamp(0.7rem, 0.8rem + 1vw, 1rem);
+    }
+
+    // PREVIEW SECTION
+    .section-preview__bottom {
+        width: 290px;
+        height: 170px;
     }
 }

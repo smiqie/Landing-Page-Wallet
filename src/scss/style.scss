@@ -24,11 +24,9 @@ a {
 
 // ==================== PAGE 1 ====================
 .main-section {
-    min-height: 60vh; // !!!
-    padding-block: 30px 60px; // !!!
+    padding-block: 30px 60px;
 
     &__header {
-        height: auto; /// !
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -42,15 +40,14 @@ a {
     &__list {
         display: flex;
         align-items: center;
-        gap: clamp(1.25rem, -2.22rem + 9.66vw, 5.625rem); // !!!
+        gap: clamp(1.25rem, -2.22rem + 9.66vw, 5.625rem);
     }
 
     &__item {
-        @include text-format($font-family: "Poppins-Regular", $font-weight: 400, $font-style: normal, $font-size: clamp(1.125rem, 0.828rem + 0.83vw, 1.4rem), $line-height: normal); // !!!!!
+        @include text-format($font-family: "Poppins-Regular", $font-weight: 400, $font-style: normal, $font-size: clamp(1.125rem, 0.828rem + 0.83vw, 1.4rem), $line-height: normal);
     }
 
     &__link--white {
-        // modificator!!
         color: $color-white;
     }
 
@@ -66,36 +63,36 @@ a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    border-radius: 1rem; // !!!
-    padding: 0.6em 2em; // !!!!!! 
+    border-radius: 1rem;
+    padding: 0.6em 2em;
 
-    @include text-format($font-family: "Poppins-Regular", $font-weight: 400, $font-style: normal, $font-size: clamp(1.125rem, 0.828rem + 0.83vw, 1.4rem), $line-height: normal, $color: $color-lightgray); // !!!!!
+    @include text-format($font-family: "Poppins-Regular", $font-weight: 400, $font-style: normal, $font-size: clamp(1.125rem, 0.828rem + 0.83vw, 1.4rem), $line-height: normal, $color: $color-lightgray);
 
     transition: all 0.2s ease 0s;
 
     // для текста???
     &--bg-purple {
-        background-color: #BFAFF2; // ???
+        background-color: #BFAFF2;
 
         &:hover {
             background-color: #a28fdd;
-            transform:translateY(-0.25rem);
+            transform: translateY(-0.25rem);
         }
     }
 
     &--bg-yellow {
-        background-color: #F8D57E; // ???
+        background-color: #F8D57E;
 
         &:hover {
             background-color: #d8b764;
-            transform:translateY(-0.25rem);
+            transform: translateY(-0.25rem);
         }
     }
 
 }
 
 .title {
-    @include text-format($font-family: "Poppins-SemiBold", $font-weight: 600, $font-style: normal, $font-size: clamp(1.5rem, 1.5rem + 1vw, 3.75rem), $line-height: 1.2em, $color: $color-white); // !!!!!
+    @include text-format($font-family: "Poppins-SemiBold", $font-weight: 600, $font-style: normal, $font-size: clamp(1.5rem, 1.5rem + 1vw, 3.75rem), $line-height: 1.2em, $color: $color-white);
 }
 
 .left-wrapper {
@@ -106,9 +103,8 @@ a {
     }
 
     &__text {
-        @include text-format($font-family: "Poppins-Regular", $font-weight: 400, $font-style: normal, $font-size: clamp(0.875rem, 0.875rem + 0.5vw, 1rem), $line-height: 1.3em, $color: #808080); // !!!!!
+        @include text-format($font-family: "Poppins-Regular", $font-weight: 400, $font-style: normal, $font-size: clamp(0.875rem, 0.875rem + 0.5vw, 1rem), $line-height: 1.3em, $color: #808080);
         margin-bottom: 70px;
-        //         $font-size: clamp(0.875rem, 0.875rem + 0.5vw, 1rem),
     }
 }
 
@@ -122,62 +118,61 @@ a {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // ==================== PAGE 2 ====================
+
 .section-preview {
-    min-height: 870px;
+    margin-bottom: 100px;
+
+    &__content-container {
+        display: flex;
+        flex-direction: column;
+        gap: 7vh;
+        align-items: center;
+    }
 
     &__top {
-        min-height: 100px;
         @include flex-center;
-        margin-bottom: 100px;
     }
 
     &__bottom {
         margin-inline: auto;
-        width: 1080px;
+        width: 1000px;
         height: 500px;
         background-color: #FDF5DF;
-        border-radius: 15px;
-        @include flex-center;
+        border-radius: 1rem;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+    }
+
+    &__app-image {
+        /* не выйдет за контейнер по высоте */
+        display: block;
+        max-height: 100%;
+        width: 100%;
+        height: auto;
+    }
+
+    &__logos-image {
+        width: 95%;
+        height: auto;
     }
 }
 
+
 // ==================== PAGE 3 ====================
 .section-feedback {
-    min-height: 870px;
     margin-bottom: 100px;
 
     &__top {
-        height: 348px;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-around;
+        margin-bottom: 70px;
     }
 
     &__icon-box {
-        width: 255px;
-        height: 255px;
+        width: 235px;
+        height: auto;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -188,32 +183,28 @@ a {
     }
 
     &__title {
-        //@include font-poppins_semibold;
-        //@include text-format($font-size: 18px, $line-height: 32px);
+        @include text-format($font-family: "Poppins-SemiBold", $font-weight: 600, $font-style: normal, $font-size: clamp(0.8rem, 0.6rem + 1vw, 1.3rem), $line-height: 1.2em, $color: white);
         margin-bottom: 10px;
     }
 
     &__text {
-        //@include font-poppins_regular;
-        //@include text-format($color: #555555, $font-size: 18px, $line-height: 32px);
+        @include text-format($font-family: "Poppins-Regular", $font-weight: 400, $font-style: normal, $font-size: clamp(0.6rem, 0.6rem + 1vw, 1rem), $line-height: 1.2em, $color: #555);
         text-align: center;
     }
 
     &__feedback-block {
         margin-inline: auto;
-        width: 1080px;
-        height: 500px;
+        width: 80vw;
+        height: 40vh;
+        //min-height: 40vh ???
         background-color: #BFAFF2;
         border-radius: 30px;
         padding: 80px 162px 0 162px;
     }
 
     &__feedback-text {
-        width: 740px;
-        height: 140px;
-        //@include font-poppins_semibold;
-        //@include text-format($color: #2B2B2B, $font-size: 24px, $line-height: 40px);
-        margin-bottom: 50px;
+        @include text-format($font-family: "Poppins-SemiBold", $font-weight: 600, $font-style: normal, $font-size: clamp(1rem, 1rem + 0.2vw, 1.4rem), $line-height: 2em, $color: #2B2B2B);
+        margin-bottom: 1.4em;
     }
 
     &__author-container {
@@ -225,12 +216,11 @@ a {
         margin-right: 20px;
     }
 
-    /*
+
     &__author-name {
-        //@include font-poppins_regular;
-        //@include text-format($color: #2B2B2B, $font-size: 18px, $line-height: 32px);
+        @include text-format($font-family: "Poppins-Regular", $font-weight: 400, $font-style: normal, $font-size: clamp(0.6rem, 0.6rem + 1vw, 0.95rem), $line-height: 1.2em, $color: #2B2B2B);
     }
-*/
+
     &__stars-container {
         display: flex;
         gap: 5px;
@@ -241,18 +231,13 @@ a {
     }
 }
 
-// ==================== PAGE 4 ====================
+// ==================== SUPPORT SECTION ====================
 .section-support {
-    min-height: 600px;
 
     &__content-container {
         display: flex;
         justify-content: space-around;
-    }
-
-    &__left-wrapper {
-        height: 350px;
-        width: 370px;
+        align-items: center;
     }
 
     &__gif {
@@ -264,8 +249,7 @@ a {
     }
 
     &__text {
-        //@include font-poppins_regular;
-        //@include text-format($color: #555555, $font-size: 18px, $line-height: 32px);
+        @include text-format($font-family: "Poppins-Regular", $font-weight: 400, $font-style: normal, $font-size: clamp(1rem, 0.2rem + 1vw, 1rem), $line-height: 1.2em, $color: #555);
         margin-bottom: 50px;
     }
 }
