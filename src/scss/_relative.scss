@@ -8,6 +8,50 @@
         width: 800px;
         height: 400px;
     }
+
+
+
+
+    /*
+    
+    .footer {
+    padding-block: 3rem 3rem;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        margin-bottom: 45px;
+    }
+
+    &__nav-menu {
+        display: flex;
+        gap: 30px;
+    }
+
+    &__item {
+        @include text-format($font-family: "Poppins-SemiBold", $font-weight: 600, $font-style: normal, $font-size: clamp(0.5rem, 0.5rem + 0.5vw, 1rem), $line-height: 1.2em, $color: $color-white);
+    }
+
+    &__text {
+        @include text-format($font-family: "Poppins-Regular", $font-weight: 400, $font-style: normal, $font-size: clamp(0.8rem, 0.8rem + 0.5vw, 1.125rem), $line-height: 1.3em, $color: $color-white);
+        margin-bottom: 15px;
+    }
+
+    &__button-block {
+        display: flex;
+        gap: 1.5rem;
+    }
+}
+    */
+    // FOOTER
+    .footer{
+        &__item {
+        font-size: clamp(0.6rem, 0.6rem + 0.5vw, 0.8rem);
+    }
+    }
 }
 
 @media (max-width: 991px) {
@@ -50,6 +94,27 @@
     .section-feedback__feedback-block {
         padding: 50px 132px 0 132px;
     }
+
+
+    // SUPPORT SECTION
+    .section-support {
+        &__text {
+            font-size: clamp(0.7rem, 0.7rem + 0.5vw, 0.9rem);
+            margin-bottom: 30px;
+
+        }
+        &__title {
+            margin-bottom: 30px;
+        }
+
+        &__content-container {
+            align-items: flex-start;
+        }
+
+        &__left-wrapper {
+            padding-block: 40px;
+        }
+    }
 }
 
 @media (max-width: 767px) {
@@ -83,17 +148,28 @@
         height: 300px;
     }
 
-        // FEEDBACK SECTION 
+    // FEEDBACK SECTION 
     .section-feedback__feedback-text {
         font-size: clamp(0.8rem, 0.8rem + 0.2vw, 1.2rem);
     }
 
     .section-feedback__feedback-block {
-        padding: 50px 102px 0 102px;
+        padding: 50px 90px 0px 90px;
     }
+
     .section-feedback__author-image {
         height: 64px;
     }
+
+    // SUPPORT SECTION
+    .section-support__content-container {
+        gap: 4em; // или больше
+        align-items: center;
+    }
+    .section-support__button{
+        font-size: clamp(0.7rem, 0.8rem + 1vw, 1rem);
+        }
+    
 }
 
 
@@ -122,5 +198,27 @@
     .section-preview__bottom {
         width: 290px;
         height: 170px;
+    }
+
+    // FEEDBACK SECTION
+    .section-feedback__feedback-block {
+        padding: 30px 70px 30px 70px;
+    }
+
+    // SECTION SUPPORT
+    .section-support {
+        &__text {
+            font-size: clamp(0.6rem, 0.7rem + 0.6vw, 0.8rem);
+            margin-bottom: 15px;
+            text-align: center;
+
+        }
+        &__title {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        &__left-wrapper {
+            padding-block: 40px;
+        }
     }
 }
